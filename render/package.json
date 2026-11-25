@@ -1,0 +1,16 @@
+{
+  "name": "hostlab-paas",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Учебный пример Node.js + PostgreSQL для практической работы №6",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "pg": "^8.13.3"
+  }
+}

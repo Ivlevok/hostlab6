@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: hostlab6-web
+    runtime: node
+    plan: free
+    region: frankfurt
+    rootDir: render
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: hostlab6-db
+          property: connectionString
+
+databases:
+  - name: hostlab6-db
+    plan: free
+    region: frankfurt
+    databaseName: hostlab6
+    user: hostlab6_user
